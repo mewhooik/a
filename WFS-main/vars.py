@@ -21,15 +21,15 @@ _load_env_file()
 API_ID = int(os.environ.get("API_ID", "27473563"))
 API_HASH = os.environ.get("API_HASH", "bc2ea0765ac96bb474891b0243f44390")
 BOT_TOKEN = os.environ.get(
-    "BOT_TOKEN", "8211756735:AAFxEZJSGbR0tyrssD7fBFzZ80ryy8Z2xH8"
+    "BOT_TOKEN", "8666609283:AAEbyMAV_UHsv-nsqDllvdrSZGEee718F3c"
 )
 
-CREDIT = os.environ.get("CREDIT", "𝕞𝕚𝕘𝕙𝕥𝕪 𝕒𝕥𝕠𝕞")
+CREDIT = os.environ.get("CREDIT", "𓍯𝙎𝙪𝙟𝙖𝙡⚝")
 
 # Owner and Admin Configuration
-OWNER_ID = int(os.environ.get("OWNER_ID", "6363345131"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "8545564031"))
 ADMINS = [
-    int(x) for x in os.environ.get("ADMINS", "6363345131").split()
+    int(x) for x in os.environ.get("ADMINS", "8545564031").split()
 ]  # Default to owner ID
 
 # Channel Configuration
