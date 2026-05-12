@@ -1,0 +1,39 @@
+services:
+  - type: worker
+    name: thanos-bot
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        value: "27473563"
+      - key: API_HASH
+        value: "bc2ea0765ac96bb474891b0243f44390"
+      - key: OWNER_ID
+        value: "6363345131"
+      - key: ADMINS
+        value: "6363345131"
+      - key: CREDIT
+        value: "𝕞𝕚𝕘𝕙𝕥𝕪 𝕒𝕥𝕠𝕞"
+      - key: THUMBNAILS
+        value: "https://files.catbox.moe/4lwnko.jpg"
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: YT_EMAIL
+        sync: false
+      - key: YT_PASSWORD
+        sync: false
+
+  - type: web
+    name: thanos-dashboard
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerCommand: python3 -u app.py
+    envVars:
+      - key: PORT
+        value: "5000"
+      - key: PYTHONUNBUFFERED
+        value: "1"
